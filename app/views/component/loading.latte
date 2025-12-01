@@ -1,8 +1,7 @@
 <!--- SOURCE: https://www.creative-tim.com/twcomponents/component/indeterminate-progress-bar --->
-<div id="loading" class="htmx-indicator">
-    <div class='w-full absolute'>
-        <div class='h-1 w-full overflow-hidden'>
-            <div class='loading-animation w-full h-full bg-tf-one left-right'></div>
-        </div>
+<!--- Shows during Alpine AJAX requests via ajax:send/ajax:sent events --->
+<div x-ref="loading" class="hidden fixed top-0 left-0 w-full z-50">
+    <div class='h-1 w-full overflow-hidden'>
+        <div class='loading-animation w-full h-full bg-purple-500 left-right'></div>
     </div>
 </div>

@@ -25,7 +25,9 @@
     {/block}
 
 </head>
-<body class="w-max-screen overflow-x-hidden flex flex-col gap-4 py-4">
+<body x-data class="w-max-screen overflow-x-hidden flex flex-col gap-4 py-4" @ajax:send.window="$refs.loading.classList.remove('hidden')" @ajax:sent.window="$refs.loading.classList.add('hidden')">
+
+{include ../component/loading.latte}
 
 {include ../component/navbar.latte}
 
