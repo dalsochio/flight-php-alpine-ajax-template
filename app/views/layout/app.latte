@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title x-sync id="title">{$title ? $title . ' - '}FlightPHP</title>
+
+    {block assets}
+        {var $isViteRunning = isset($_SESSION['hot-reload']) && $_SESSION['hot-reload'] === true}
+
+        {if $isViteRunning}
+            <script type="module" src="http://localhost:5173/@vite/client"></script>
+            <script type="module" src="http://localhost:5173/app/views/assets/js/app.js"></script>
+            <link rel="stylesheet" href="http://localhost:5173/app/views/assets/css/app.css"/>
+        {else}
+            <link rel="stylesheet" href="/public/assets/css/app.css">
+            <script type="module" src="/public/assets/js/app.js"></script>
+        {/if}
+    {/block}
+
+    {block global-vars}
+        <script id="global-vars" type="text/global-vars">
+            {}
+        </script>
+    {/block}
+
+</head>
+<body class="w-max-screen overflow-x-hidden flex flex-col gap-4 py-4">
+
+{include ../component/navbar.latte}
+
+<div class="container mx-auto min-h-[65dvh] grid grid-cols-[auto_1fr] gap-4">
+    {include ../component/aside.latte}
+    <main x-target id="main" class="bg-gray-900 p-4 rounded-md">
+        {block page}{/block}
+    </main>
+</div>
+
+<div x-sync id="script">
+    {block script}{/block}
+</div>
+</body>
+</html>

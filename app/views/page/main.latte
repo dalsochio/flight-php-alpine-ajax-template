@@ -1,0 +1,12 @@
+{layout ../layout/app.latte}
+
+{block page}
+    {include ../component/loading.latte}
+    <span class="block text-center font-black">MAIN</span>
+    <br>
+    <div class="mt-4 p-4 bg-orange-900/50 rounded-lg">
+        <h2 class="font-bold mb-2">Main Preview:</h2>
+        <p x-text="$store.demo.main" class="text-xl text-orange-300"></p>
+        <span class="text-xs text-orange-400">{\microtime()}</span>
+    </div>
+{/block}

@@ -1,0 +1,27 @@
+{
+  "require": {
+    "flightphp/core": "^3.15",
+    "tracy/tracy": "^2.10",
+    "latte/latte": "^3.0",
+    "guzzlehttp/guzzle": "^7.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "App\\Controllers\\": "./app/controllers/",
+      "App\\Helpers\\": "./app/helpers/"
+    }
+  },
+  "autoload-dev": {
+    "files": [
+      "./stubs/Flight-ide-helper.php"
+    ]
+  },
+  "require-dev": {
+    "flightphp/tracy-extensions": "^0.2.5"
+  },
+  "scripts": {
+    "start": "php -S localhost:8000 -t public",
+    "post-autoload-dump": []
+  }
+}

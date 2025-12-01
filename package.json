@@ -1,0 +1,22 @@
+{
+  "name": "flight-php-alpine-ajax-template",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "terser": "^5.39.0",
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "@alpinejs/morph": "^3.15.2",
+    "@imacrayon/alpine-ajax": "^0.12.6",
+    "@tailwindcss/vite": "^4.1.6",
+    "alpinejs": "^3.14.9",
+    "tailwindcss": "^4.1.6"
+  }
+}
