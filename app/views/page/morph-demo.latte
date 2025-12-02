@@ -5,11 +5,7 @@
         <h1 class="text-2xl font-bold">Morph Demo</h1>
         <h3>Even if I launch a new page, if it contains Alpine code that accesses the store or other existing data, that new page will automatically load with the current state.</h3>
 
-        <div class="p-4 bg-orange-900/50 rounded-lg">
-            <h2 class="font-bold mb-2">Main Preview:</h2>
-            <p x-text="$store.demo.main" class="text-xl text-orange-300"></p>
-            <span class="text-xs text-orange-400">{\microtime()}</span>
-        </div>
+        {include ../component/main-preview.latte}
 
         <div class="flex flex-col gap-4 p-4 bg-gray-800 rounded-lg">
             <div class="flex flex-col gap-2">
